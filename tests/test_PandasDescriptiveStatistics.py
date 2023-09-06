@@ -1,4 +1,6 @@
 from src.PandasDescriptiveStatistics import return_more_than_25th_quantile
+import pandas as pd
+
 
 def test_return_more_than_25th_quantile():
     data = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
