@@ -8,7 +8,7 @@ def test_return_more_than_25th_quantile():
 
     res =  return_more_than_25th_quantile(data, target_column)
     
-    target_quantile = df[target_column].quantile(0.25)
-    data =  data.loc[data[target] > target_quantile]
+    target_quantile = data[target_column].quantile(0.25)
+    data =  data.loc[data[target_column] > target_quantile]
     
     assert data == res
