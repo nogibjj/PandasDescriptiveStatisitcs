@@ -46,7 +46,8 @@
 				"ms-toolsai.jupyter-renderers",
 				"ms-python.vscode-pylance",
 				"ms-python.python",
-				"ms-vscode.makefile-tools"],
+				"ms-vscode.makefile-tools",
+			    "etmoffat.pip-packages"],
     	"remoteUser": "rmr_code",
 
 	"overrideCommand": false,
