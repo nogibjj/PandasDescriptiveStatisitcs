@@ -44,7 +44,8 @@
 				"ms-python.vscode-pylance",
 				"ms-python.python",
 				"ms-vscode.makefile-tools",
-			    "etmoffat.pip-packages"],
+			    "etmoffat.pip-packages", 
+				"ms-python.pylint"],
     	"remoteUser": "rmr_code",
 
 	"overrideCommand": false,
