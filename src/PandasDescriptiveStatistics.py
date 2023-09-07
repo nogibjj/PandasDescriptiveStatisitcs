@@ -1,18 +1,16 @@
 import pandas as pd
 
 
-def return_more_than_25th_quantile(df: pd.DataFrame, target: str):
-    """ Takes in a dataframe and returns only the top 75th perntile of data
-    based on a tatget column (variable) """
+def return_25th_quantile(df: pd.DataFrame, target: str) -> float:
+    """ Takes in a dataframe and returns 25th quantile of the target column"""
 
     target_quantile = df[target].quantile(0.25)
-    df =  df.loc[df[target] > target_quantile]
-    
-    return df
+
+    return target_quantile
     
 
 if __name__ == '__main__':
     data = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
     target_column = 'sepal_width'
 
-    print(return_more_than_25th_quantile(data, target_column))
+    print(return_25th_quantile(data, target_column))
