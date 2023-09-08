@@ -1,3 +1,5 @@
+import sys
+sys.path.append("/workspaces/PandasDescriptiveStatisitcs")
 from src.PandasDescriptiveStatistics import return_25th_quantile
 import pandas as pd
 from math import floor
