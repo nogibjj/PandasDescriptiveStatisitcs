@@ -3,7 +3,7 @@ import sys
 from math import floor
 import pandas as pd
 sys.path.append("/workspaces/PandasDescriptiveStatisitcs")
-from pandas_descriptive_statistics import return_25th_quantile
+from src.pandas_descriptive_statistics import return_25th_quantile
 
 
 def test_return_25th_quantile():
