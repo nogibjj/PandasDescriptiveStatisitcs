@@ -1,7 +1,7 @@
 # Pandas Descriptive Statistics Script
 ## Week 2 Mini Project by Rakeen Rouf
 
-[![PythonCiCd](https://github.com/rmr327/cicd_python_template/actions/workflows/python_ci_cd.yml/badge.svg)](https://github.com/rmr327/cicd_python_template/actions/workflows/python_ci_cd.yml)
+[![PythonCiCd](https://github.com/nogibjj/PandasDescriptiveStatisitcs/actions/workflows/python_ci_cd.yml/badge.svg)](https://github.com/nogibjj/PandasDescriptiveStatisitcs/actions/workflows/python_ci_cd.yml)
 
 ---
 
