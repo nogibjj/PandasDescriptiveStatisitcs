@@ -46,7 +46,7 @@ def visualize_dataset(data_: pd.DataFrame, outcome_var: str, target_var: str,
     deviation."""
 
     # Get the unique categories from the interaction_term column
-    categories = data[inteaction_term].unique()
+    categories = data_[inteaction_term].unique()
     # Define a colormap based on the number of unique categories
     cmap = plt.cm.get_cmap("tab10", lut=len(categories))
 
