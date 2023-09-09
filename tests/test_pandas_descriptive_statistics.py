@@ -8,7 +8,7 @@ from src.pandas_descriptive_statistics import return_25th_quantile
 
 def test_return_25th_quantile():
     """test function"""
-    data = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
+    data = pd.read_csv("data/iris_data.csv")
     target_column = 'sepal_width'
 
     res =  return_25th_quantile(data, target_column)
