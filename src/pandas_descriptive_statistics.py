@@ -37,10 +37,13 @@ def return_median(data_: pd.DataFrame, target: str) -> float:
     return target_median
 
 
-def visualize_dataset(data_: pd.DataFrame, outcome_var: str, target_var: str, inteaction_term: str):
-    """Visualizes the passed data. Makes a scatter plot of target vs outcome variables. Colors the scatter
-    plot by the interaction term. Draws a best fit linear regression line for each category of the iinteration
-    term"""
+def visualize_dataset(data_: pd.DataFrame, outcome_var: str, target_var: str,
+                       inteaction_term: str) -> None:
+    """Visualizes the passed data. Makes a scatter plot of target vs outcome
+    variables. Colors the scatter plot by the interaction term. Draws a best
+    fit linear regression line for each category of the iinteration
+    term. Draws vertical lines to signify the mean, median and standard
+    deviation."""
 
     # Get the unique categories from the interaction_term column
     categories = data[inteaction_term].unique()
@@ -65,27 +68,29 @@ def visualize_dataset(data_: pd.DataFrame, outcome_var: str, target_var: str, in
     plt.title(f"Descriptive Statistics {target_var} VS {outcome_var}")
 
     # Fitting and plotting linear regression models for each interaction term category
-    for c in categories:
-        data_c = data_.loc[data_[inteaction_term] == c]
+    for cat in categories:
+        data_c = data_.loc[data_[inteaction_term] == cat]
 
         slope, intercept = np.polyfit(data_c[target_var], data_c[outcome_var], 1)
         best_fit_line = slope * data_c[target_var] + intercept
 
         plt.plot(data_c[target_var],
-                best_fit_line, 
-                label=f'Best Fit For Interaction Category: {c}')
-        
-        
+                best_fit_line,
+                label=f'Best Fit For Interaction Category: {cat}')
+
+
     # Plot mean, median, std dev, and 25th quantil;e
     mean = return_mean(data_, target_var)
     plt.axvline(x=mean, color='red', linestyle='--', label=f'Mean: {mean:.2f}')
-    
+
     median = return_median(data_, target_var)
     plt.axvline(x=median, color='green', linestyle='--', label=f'Median: {median:.2f}')
 
     stand_dev = return_std_dev(data_, target_var)
-    plt.axvline(x=mean + stand_dev, color='orange', linestyle='--', label=f'Mean + StDev: {stand_dev + mean:.2f}')
-    plt.axvline(x=mean - stand_dev, color='orange', linestyle='--', label=f'Mean - StDev: {mean - stand_dev:.2f}')
+    plt.axvline(x=mean + stand_dev, color='orange', linestyle='--',
+                label=f'Mean + StDev: {stand_dev + mean:.2f}')
+    plt.axvline(x=mean - stand_dev, color='orange', linestyle='--',
+                label=f'Mean - StDev: {mean - stand_dev:.2f}')
 
     plt.legend()
     plt.show()
