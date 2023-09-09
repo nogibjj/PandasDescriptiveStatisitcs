@@ -59,7 +59,7 @@ def visualize_dataset(data_: pd.DataFrame, outcome_var: str, target_var: str,
     plt.scatter(
         data_[target_var],
         data_[outcome_var],
-        c=data[inteaction_term].apply(lambda x: list(categories).index(x)),
+        c=data_[inteaction_term].apply(lambda x: list(categories).index(x)),
         cmap=custom_cmap)
 
     # Add labels
