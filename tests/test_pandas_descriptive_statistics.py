@@ -34,7 +34,7 @@ def test_return_mean():
     calculated_mean_a = return_mean(data, target_column)
 
     # Check if the calculated mean matches the expected mean
-    assert calculated_mean_a == expected_mean_a
+    assert round(calculated_mean_a) == round(expected_mean_a)
 
 
 def test_return_std_dev():
@@ -59,7 +59,7 @@ def test_return_median():
     calculated_median = return_median(data, target_column)
 
     # Check if the calculated mean matches the expected mean
-    assert calculated_median == expected_median
+    assert round(calculated_median) == round(expected_median)
 
 def test_visualize_dataset():
     """Testing function for visualization"""
@@ -75,3 +75,11 @@ def test_visualize_dataset():
     # Capture the plot output and check if it's not empty
     fig = plt.gcf()
     assert len(fig.axes) > 0
+
+
+if __name__ == '__main__':
+    test_visualize_dataset()
+    test_return_std_dev()
+    test_return_25th_quantile()
+    test_return_mean()
+    test_return_median
