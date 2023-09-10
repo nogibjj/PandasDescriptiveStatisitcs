@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=src.pandas_descriptive_statistics.py
+	python -m pytest -vv --cov=src.pandas_descriptive_statistics
 
 format:	
 	black src/*.py 
