@@ -1,7 +1,9 @@
 """Test script for pandas descriptive statistics script"""
+import sys
 from math import floor
 import pandas as pd
 import matplotlib.pyplot as plt
+sys.path.append("/workspaces/PandasDescriptiveStatisitcs")
 from src.pandas_descriptive_statistics import return_25th_quantile, return_mean
 from src.pandas_descriptive_statistics import return_std_dev, return_median, visualize_dataset
 
