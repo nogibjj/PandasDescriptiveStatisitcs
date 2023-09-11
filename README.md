@@ -23,7 +23,7 @@ You can find the relevant code in the following folders:
 
 You can find the relevant code in the following folders:
 - `output/generated_report.md`
-- `test`
+- `output/visualization.png`
 
 ---
 
