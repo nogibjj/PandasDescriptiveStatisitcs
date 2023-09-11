@@ -103,7 +103,7 @@ def visualize_dataset(data_: pd.DataFrame, outcome_var: str, target_var: str,
         report.write(f'Mean: {mean} \n')
         report.write(f'Median: {median} \n')
         report.write(f'Standard Deviation: {stand_dev} \n')
-        report.write(f"\n![Visualization]({visualization_path})\n")
+        report.write("\n![Visualization](visualization.png)\n")
 
 
 if __name__ == "__main__":
