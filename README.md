@@ -43,7 +43,9 @@ You can find the relevant code in the following folders:
 **Sample Visualization Using the IRIS data set**
 
 Mean of sepal width = 3.06
+
 Median of spepal width = 3.00
+
 Standard deviation of sepal width = 0.43
 
 ![Visualization Example](https://user-images.githubusercontent.com/36940292/266804593-4fe25e4a-186c-4e49-956a-508c5d66cb05.jpg)
