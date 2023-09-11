@@ -94,6 +94,16 @@ def visualize_dataset(data_: pd.DataFrame, outcome_var: str, target_var: str,
 
     plt.legend()
     plt.show()
+    visualization_path = 'output/visualization.png'
+    plt.savefig(visualization_path)  # save png
+
+    # Save generated report
+    summary_report_path = r'output/generated_report.md'
+    with open(summary_report_path, "w", encoding="utf-8") as report:
+        report.write(f'Mean: {mean} \n')
+        report.write(f'Median: {median} \n')
+        report.write(f'Standard Deviation: {stand_dev} \n')
+        report.write(f"\n![Visualization]({visualization_path})\n")
 
 
 if __name__ == "__main__":

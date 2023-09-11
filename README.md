@@ -7,7 +7,7 @@
 
 **Summary**
 
-The objective of this week's mini project was to create a script ("pandas_descriptive_statistics.py") utilizing the pandas library for descriptive statistics. This script has been integrated with the Python CiCd automation template introduced in week one. A sample ouput of the script using the IRIS data set has been included at the bottom of this report.
+The objective of this week's mini project was to create a script ("pandas_descriptive_statistics.py") utilizing the pandas library for descriptive statistics. This script has been integrated with the Python CiCd automation template introduced in week one. A sample ouput of the script using the IRIS data set has been included at the bottom of this report. The generated report and visualization can be found in the output folder.
 
 ---
 
@@ -15,6 +15,14 @@ The objective of this week's mini project was to create a script ("pandas_descri
 
 You can find the relevant code in the following folders:
 - `src`
+- `test`
+
+---
+
+**Output Location**
+
+You can find the relevant code in the following folders:
+- `output/generated_report.md`
 - `test`
 
 ---
@@ -35,8 +43,7 @@ You can find the relevant code in the following folders:
 
 5. `def visualize_dataset(data_: pd.DataFrame, outcome_var: str, target_var: str, inteaction_term: str) -> None`  
    Visualizes the passed data. Makes a scatter plot of target vs outcome variables. Colors the scatter
-   plot by the interaction term. Draws a best fit linear regression line for each category of the iinteration
-   term. Draws vertical lines to signify the mean, median and standard deviation.
+   plot by the interaction term. Draws a best fit linear regression line for each category of the iinteration term. Draws vertical lines to signify the mean, median and standard deviation. Saves output visualization to a png file in the output folder. Generates a summary report in the output folder.
 
 ---
 
