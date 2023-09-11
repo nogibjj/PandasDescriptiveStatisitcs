@@ -100,9 +100,9 @@ def visualize_dataset(data_: pd.DataFrame, outcome_var: str, target_var: str,
     # Save generated report
     summary_report_path = r'output/generated_report.md'
     with open(summary_report_path, "w", encoding="utf-8") as report:
-        report.write(f'Mean: {round(mean)} \n \n \n')
-        report.write(f'Median: {round(median)} \n \n \n')
-        report.write(f'Standard Deviation: {round(stand_dev)} \n \n \n')
+        report.write(f'Mean: {round(mean, 3)} \n \n \n')
+        report.write(f'Median: {round(median, 3)} \n \n \n')
+        report.write(f'Standard Deviation: {round(stand_dev, 3)} \n \n \n')
         report.write("\n![Visualization](visualization.png)\n")
 
 
