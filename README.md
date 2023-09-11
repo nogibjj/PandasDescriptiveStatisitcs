@@ -21,7 +21,7 @@ You can find the relevant code in the following folders:
 
 **Output Location**
 
-Every time you run the code from the source folder, output files will be generated at the following locations:
+Every time you run "pandas_descriptive_statistics.py" from the source folder, output files will be generated at the following locations:
 - `output/generated_report.md`
 - `output/visualization.png`
 
