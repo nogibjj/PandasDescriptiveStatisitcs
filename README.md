@@ -1,4 +1,4 @@
-# Pandas Descriptive Statistics Script
+# Pandas Descriptive Statistics Script Report
 ## Week 2 Mini Project by Rakeen Rouf
 
 [![PythonCiCd](https://github.com/nogibjj/PandasDescriptiveStatisitcs/actions/workflows/python_ci_cd.yml/badge.svg)](https://github.com/nogibjj/PandasDescriptiveStatisitcs/actions/workflows/python_ci_cd.yml)
@@ -7,7 +7,7 @@
 
 **Summary**
 
-The objective of this week's mini project was to create a script utilizing pandas for descriptive statistics. This script has been integrated with the Python CiCd automation template introduced in week one.
+The objective of this week's mini project was to create a script ("pandas_descriptive_statistics.py") utilizing the pandas library for descriptive statistics. This script has been integrated with the Python CiCd automation template introduced in week one. A sample ouput of the script using the IRIS data set has been included at the bottom of this report.
 
 ---
 
@@ -41,6 +41,10 @@ You can find the relevant code in the following folders:
 ---
 
 **Sample Visualization Using the IRIS data set**
+
+Mean of sepal width = 3.06
+Median of spepal width = 3.00
+Standard deviation of sepal width = 0.43
 
 ![Visualization Example](https://user-images.githubusercontent.com/36940292/266804593-4fe25e4a-186c-4e49-956a-508c5d66cb05.jpg)
 ---
