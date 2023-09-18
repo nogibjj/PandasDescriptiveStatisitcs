@@ -23,7 +23,7 @@ jobs:
       - name: deploy
         run: make deploy
       - name: Run main script
-        run: python src/main.py
+        run: python src/pandas_descriptive_statistics.py
 
       - name: List files
         run: |
