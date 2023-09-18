@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ml_pipeline-artifacts
-          path: ${{ github.workspace }}/results
+          path: ${{ github.workspace }}/output
 
       - name: Save to repository
         env:
