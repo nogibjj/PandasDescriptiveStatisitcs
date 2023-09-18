@@ -37,8 +37,9 @@ def return_median(data_: pd.DataFrame, target: str) -> float:
     return target_median
 
 
-def visualize_dataset(data_: pd.DataFrame, outcome_var: str, target_var: str,
-                       inteaction_term: str) -> None:
+def visualize_dataset(
+    data_: pd.DataFrame, outcome_var: str, target_var: str, inteaction_term: str
+) -> None:
     """Visualizes the passed data. Makes a scatter plot of target vs outcome
     variables. Colors the scatter plot by the interaction term. Draws a best
     fit linear regression line for each category of the iinteration
@@ -60,7 +61,8 @@ def visualize_dataset(data_: pd.DataFrame, outcome_var: str, target_var: str,
         data_[target_var],
         data_[outcome_var],
         c=data_[inteaction_term].apply(lambda x: list(categories).index(x)),
-        cmap=custom_cmap)
+        cmap=custom_cmap,
+    )
 
     # Add labels
     plt.xlabel(target_var)
@@ -74,35 +76,44 @@ def visualize_dataset(data_: pd.DataFrame, outcome_var: str, target_var: str,
         slope, intercept = np.polyfit(data_c[target_var], data_c[outcome_var], 1)
         best_fit_line = slope * data_c[target_var] + intercept
 
-        plt.plot(data_c[target_var],
-                best_fit_line,
-                label=f'Best Fit For Interaction Category: {cat}')
-
+        plt.plot(
+            data_c[target_var],
+            best_fit_line,
+            label=f"Best Fit For Interaction Category: {cat}",
+        )
 
     # Plot mean, median, std dev, and 25th quantil;e
     mean = return_mean(data_, target_var)
-    plt.axvline(x=mean, color='red', linestyle='--', label=f'Mean: {mean:.2f}')
+    plt.axvline(x=mean, color="red", linestyle="--", label=f"Mean: {mean:.2f}")
 
     median = return_median(data_, target_var)
-    plt.axvline(x=median, color='green', linestyle='--', label=f'Median: {median:.2f}')
+    plt.axvline(x=median, color="green", linestyle="--", label=f"Median: {median:.2f}")
 
     stand_dev = return_std_dev(data_, target_var)
-    plt.axvline(x=mean + stand_dev, color='orange', linestyle='--',
-                label=f'Mean + StDev: {stand_dev + mean:.2f}')
-    plt.axvline(x=mean - stand_dev, color='orange', linestyle='--',
-                label=f'Mean - StDev: {mean - stand_dev:.2f}')
+    plt.axvline(
+        x=mean + stand_dev,
+        color="orange",
+        linestyle="--",
+        label=f"Mean + StDev: {stand_dev + mean:.2f}",
+    )
+    plt.axvline(
+        x=mean - stand_dev,
+        color="orange",
+        linestyle="--",
+        label=f"Mean - StDev: {mean - stand_dev:.2f}",
+    )
 
     plt.legend()
     plt.show()
-    visualization_path = 'output/visualization.png'
+    visualization_path = "output/visualization.png"
     plt.savefig(visualization_path)  # save png
 
     # Save generated report
-    summary_report_path = r'output/generated_report.md'
+    summary_report_path = r"output/generated_report.md"
     with open(summary_report_path, "w", encoding="utf-8") as report:
-        report.write(f'Mean: {round(mean, 3)} \n \n \n')
-        report.write(f'Median: {round(median, 3)} \n \n \n')
-        report.write(f'Standard Deviation: {round(stand_dev, 3)} \n \n \n')
+        report.write(f"Mean: {round(mean, 3)} \n \n \n")
+        report.write(f"Median: {round(median, 3)} \n \n \n")
+        report.write(f"Standard Deviation: {round(stand_dev, 3)} \n \n \n")
         report.write("\n![Visualization](visualization.png)\n")
 
 
